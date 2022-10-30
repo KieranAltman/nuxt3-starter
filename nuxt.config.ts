@@ -11,7 +11,7 @@ if (process.env.NODE_ENV === 'development') {
 
 // https://v3.nuxtjs.org/docs/directory-structure/nuxt.config
 export default defineNuxtConfig({
-  buildModules: ['nuxt-windicss', '@pinia/nuxt', 'vite-plugin-vue-type-imports/nuxt', '@vueuse/nuxt', '@intlify/nuxt3'],
+  buildModules: ['nuxt-windicss', '@pinia/nuxt', 'vite-plugin-vue-type-imports/nuxt', '@vueuse/nuxt'],
   meta: {
     title: 'Page title',
     meta: [
@@ -44,12 +44,5 @@ export default defineNuxtConfig({
         }
       }
     ]
-  },
-  intlify: {
-    localeDir: 'locales',
-    vueI18n: {
-      locale: 'en',
-      fallbackLocale: 'en'
-    }
   }
 })
