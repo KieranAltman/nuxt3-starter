@@ -1,31 +1,26 @@
-import { defineNuxtConfig } from 'nuxt'
+// const alias: Record<string, string> = {
+//   echarts: 'echarts/dist/echarts.common.min.js'
+// }
 
-const alias: Record<string, string> = {
-  echarts: 'echarts/dist/echarts.common.min.js'
-}
+// if (process.env.NODE_ENV === 'development') {
+//   alias.ethers = 'ethers/lib/index'
+//   alias.moment = 'moment/moment'
+// }
 
-if (process.env.NODE_ENV === 'development') {
-  alias.ethers = 'ethers/lib/index'
-  alias.moment = 'moment/moment'
-}
-
-// https://v3.nuxtjs.org/docs/directory-structure/nuxt.config
 export default defineNuxtConfig({
-  buildModules: ['nuxt-windicss', '@pinia/nuxt', 'vite-plugin-vue-type-imports/nuxt', '@vueuse/nuxt'],
-  meta: {
-    title: 'Page title',
-    meta: [
-      { charset: 'utf-8' },
-      {
-        hid: 'keywords',
-        name: 'keywords',
-        content: ''
-      },
-      { hid: 'description', name: 'description', content: '' }
-    ]
+  modules: ['nuxt-windicss', ['@pinia/nuxt', { autoImports: ['defineStore'] }], '@vueuse/nuxt'],
+  app: {
+    head: {
+      title: 'Nuxt3 Starter',
+      meta: [
+        { charset: 'utf-8' },
+        { hid: 'keywords', name: 'keywords', content: '' },
+        { hid: 'description', name: 'description', content: '' }
+      ]
+    }
   },
   typescript: { strict: true },
-  alias,
+  // alias,
   css: ['~~/assets/css/app.css'],
   build: {
     templates: [

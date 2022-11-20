@@ -1,5 +1,4 @@
 import store from 'store'
-import { defineStore } from 'pinia'
 
 export const useWalletStore = defineStore('wallet', {
   state: () => ({

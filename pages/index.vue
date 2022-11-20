@@ -1,7 +1,3 @@
 <template>
-  <Hello />
+  <Hello :title="'Hello Nuxt3!'" />
 </template>
-
-<script setup lang="ts"></script>
-
-<style></style>
