@@ -1,14 +1,9 @@
 import BigNumber from 'bignumber.js/bignumber.mjs'
-import { BigNumber as BN } from 'ethers'
-import moment from 'moment'
+import dayjs from 'dayjs'
 import { Bignumberish } from '~~/types'
 
-export function formatUnits(value: Bignumberish | BN, decimals = 18, digits = decimals, simple = false) {
-  // check for ethers' BigNumber
-  if (BN.isBigNumber(value)) {
-    value = value.toString()
-  }
-  value = new BigNumber(value as any)
+export function formatUnits(value: Bignumberish | BigInt, decimals = 18, digits = decimals, simple = false) {
+  value = new BigNumber(value.toString())
   // is 0 ?
   if (value.eq(0)) {
     return '0'
@@ -30,7 +25,7 @@ export function formatEstimatePercent(value: any) {
 }
 
 export function formatTime(timestamp: number, formatter = 'YYYY-MM-DD HH:mm:ss') {
-  return moment.unix(timestamp).format(formatter)
+  return dayjs.unix(timestamp).format(formatter)
 }
 
 export function toFixed(value: number | string | BigNumber, digits = 0) {
@@ -48,7 +43,7 @@ export function toFixed(value: number | string | BigNumber, digits = 0) {
 }
 
 export function formatAssetValue(
-  balance: string | number | BN,
+  balance: string | number | BigInt,
   price: string | number,
   decimals = 18,
   digits = decimals
@@ -57,10 +52,7 @@ export function formatAssetValue(
     return '0'
   }
 
-  if (BN.isBigNumber(balance)) {
-    balance = balance.toString()
-  }
-  return new BigNumber(balance)
+  return new BigNumber(balance.toString())
     .div(10 ** decimals)
     .times(price)
     .times(10 ** digits)
