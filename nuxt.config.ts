@@ -8,7 +8,7 @@
 // }
 
 export default defineNuxtConfig({
-  modules: ['nuxt-windicss', ['@pinia/nuxt', { autoImports: ['defineStore'] }], '@vueuse/nuxt'],
+  modules: ['nuxt-windicss', ['@pinia/nuxt', { autoImports: ['defineStore'] }], '@vueuse/nuxt', '@nuxtjs/i18n'],
   app: {
     head: {
       title: 'Nuxt3 Starter',
@@ -39,5 +39,16 @@ export default defineNuxtConfig({
         }
       }
     ]
+  },
+  // @note: i18n
+  i18n: {
+    langDir: './locales',
+    skipSettingLocaleOnNavigate: true,
+    locales: [{ code: 'en', name: 'English', file: 'en.yaml' }],
+    defaultLocale: 'en',
+    detectBrowserLanguage: {
+      useCookie: true
+    },
+    vueI18n: './i18n.config.ts'
   }
 })

@@ -1,3 +1,3 @@
 <template>
-  <Hello :title="'Hello Nuxt3!'" />
+  <Hello :title="$t('hello')" />
 </template>

@@ -1,0 +1,15 @@
+{
+  "Vue3 SFC setup": {
+    "prefix": "vue3",
+    "body": [
+      "<template>",
+      "\t<div></div>",
+      "</template>",
+      "",
+      "<script setup lang=\"ts\"></script>",
+      "",
+      "<style></style>",
+      ""
+    ]
+  }
+}
