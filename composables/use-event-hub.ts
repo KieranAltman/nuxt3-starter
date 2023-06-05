@@ -1,12 +1,14 @@
 const events = new Map<string, Set<Function>>()
 
-function on(event: string, handler: () => void) {
+type AppEvent = string
+
+function on(event: AppEvent, handler: () => void) {
   const handlers = events.get(event) || new Set()
   handlers.add(handler)
   events.set(event, handlers)
 }
 
-function once(event: string, handler: (...args: any[]) => void) {
+function once(event: AppEvent, handler: (...args: any[]) => void) {
   function _handler(..._args: any[]) {
     off(event, _handler)
     handler(..._args)
@@ -14,7 +16,7 @@ function once(event: string, handler: (...args: any[]) => void) {
   return on(event, _handler)
 }
 
-function off(event: string, handler: () => void) {
+function off(event: AppEvent, handler: () => void) {
   const handlers = events.get(event) || new Set()
   handlers.delete(handler)
 
@@ -23,7 +25,7 @@ function off(event: string, handler: () => void) {
   }
 }
 
-function emit(event: string, ...payload: any[]) {
+function emit(event: AppEvent, ...payload: any[]) {
   const handlers = events.get(event)
   if (!handlers) return
 
@@ -32,11 +34,8 @@ function emit(event: string, ...payload: any[]) {
   })
 }
 
-function auto(event: string, handler: () => void) {
-  onMounted(() => {
-    console.log('log')
-    on(event, handler)
-  })
+function auto(event: AppEvent, handler: () => void) {
+  onMounted(() => on(event, handler))
   onUnmounted(() => off(event, handler))
 }
 
