@@ -21,7 +21,7 @@ export default defineNuxtConfig({
   },
   typescript: { strict: true },
   // alias,
-  css: ['~~/assets/css/app.css'],
+  css: ['~~/assets/css/app.css', '~~/assets/css/transition.css', '~~/assets/fonts/FiraCode/stylesheet.css'],
   build: {
     templates: [
       {
