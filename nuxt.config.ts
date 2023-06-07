@@ -8,7 +8,13 @@
 // }
 
 export default defineNuxtConfig({
-  modules: ['nuxt-windicss', ['@pinia/nuxt', { autoImports: ['defineStore'] }], '@vueuse/nuxt', '@nuxtjs/i18n'],
+  modules: [
+    'nuxt-windicss',
+    ['@pinia/nuxt', { autoImports: ['defineStore'] }],
+    '@vueuse/nuxt',
+    '@nuxtjs/i18n',
+    'nuxt-icon'
+  ],
   app: {
     head: {
       title: 'Nuxt3 Starter',

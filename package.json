@@ -33,6 +33,7 @@
     "echarts": "^5.4.0",
     "ethers": "^6.2.3",
     "notiwind": "^1.2.6",
+    "nuxt-icon": "^0.4.1",
     "qrcode": "^1.5.1",
     "store": "^2.0.12",
     "tiny-emitter": "^2.1.0",
