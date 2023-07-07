@@ -1,20 +1,5 @@
-// const alias: Record<string, string> = {
-//   echarts: 'echarts/dist/echarts.common.min.js'
-// }
-
-// if (process.env.NODE_ENV === 'development') {
-//   alias.ethers = 'ethers/lib/index'
-//   alias.moment = 'moment/moment'
-// }
-
 export default defineNuxtConfig({
-  modules: [
-    'nuxt-windicss',
-    ['@pinia/nuxt', { autoImports: ['defineStore'] }],
-    '@vueuse/nuxt',
-    '@nuxtjs/i18n',
-    'nuxt-icon'
-  ],
+  modules: ['nuxt-windicss', ['@pinia/nuxt', { autoImports: ['defineStore'] }], '@vueuse/nuxt', 'nuxt-icon'],
   app: {
     head: {
       title: 'Nuxt3 Starter',
@@ -45,16 +30,5 @@ export default defineNuxtConfig({
         }
       }
     ]
-  },
-  // @note: i18n
-  i18n: {
-    langDir: './locales',
-    skipSettingLocaleOnNavigate: true,
-    locales: [{ code: 'en', name: 'English', file: 'en.yaml' }],
-    defaultLocale: 'en',
-    detectBrowserLanguage: {
-      useCookie: true
-    },
-    vueI18n: './i18n.config.ts'
   }
 })

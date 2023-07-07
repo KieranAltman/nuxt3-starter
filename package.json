@@ -23,7 +23,6 @@
   },
   "dependencies": {
     "@chenfengyuan/vue-qrcode": "^2.0.0",
-    "@nuxtjs/i18n": "^8.0.0-beta.11",
     "@pinia/nuxt": "^0.4.7",
     "@windicss/plugin-scrollbar": "^1.2.3",
     "axios": "^0.27.2",
