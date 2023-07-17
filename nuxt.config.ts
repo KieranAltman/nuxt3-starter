@@ -1,5 +1,5 @@
 export default defineNuxtConfig({
-  modules: ['nuxt-windicss', ['@pinia/nuxt', { autoImports: ['defineStore'] }], '@vueuse/nuxt', 'nuxt-icon'],
+  modules: [['@pinia/nuxt', { autoImports: ['defineStore'] }], '@vueuse/nuxt', 'nuxt-icon', '@nuxtjs/tailwindcss'],
   app: {
     head: {
       title: 'Nuxt3 Starter',

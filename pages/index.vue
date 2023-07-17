@@ -1,3 +1,3 @@
 <template>
-  <Hello :title="$t('hello')" />
+  <Hello title="Hi" />
 </template>
