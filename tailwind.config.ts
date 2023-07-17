@@ -11,7 +11,10 @@ export default <Partial<Config>>{
   ],
   theme: {
     extend: {
-      colors: {}
+      colors: {},
+      fontFamily: {
+        FiraCode: ['Fira Code']
+      }
     }
   },
   plugins: [require('flowbite/plugin')]
