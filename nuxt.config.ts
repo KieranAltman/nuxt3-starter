@@ -17,26 +17,7 @@ export default defineNuxtConfig({
     }
   },
   typescript: { strict: true },
-  // alias,
   css: ['~~/assets/css/app.css', '~~/assets/css/transition.css', '~~/assets/fonts/FiraCode/stylesheet.css'],
-  build: {
-    templates: [
-      {
-        filename: 'views/app.template.html',
-        getContents() {
-          return `<!DOCTYPE html>
-            <html {{ HTML_ATTRS }}>
-              <head>
-              {{ HEAD }}
-              </head>
-              <body {{ BODY_ATTRS }}>
-              {{ APP }}
-              </body>
-            </html>`
-        }
-      }
-    ]
-  },
   i18n: {
     langDir: './locales',
     skipSettingLocaleOnNavigate: true,
