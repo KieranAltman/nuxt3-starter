@@ -4,7 +4,8 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
     'nuxt-icon',
     '@nuxtjs/tailwindcss',
-    '@nuxtjs/i18n'
+    '@nuxtjs/i18n',
+    '@nuxtjs/google-fonts'
   ],
   app: {
     head: {
@@ -17,7 +18,7 @@ export default defineNuxtConfig({
     }
   },
   typescript: { strict: true },
-  css: ['~~/assets/css/app.css', '~~/assets/css/transition.css', '~~/assets/fonts/FiraCode/stylesheet.css'],
+  css: ['~~/assets/css/app.css', '~~/assets/css/transition.css'],
   i18n: {
     langDir: './locales',
     skipSettingLocaleOnNavigate: true,
@@ -27,5 +28,10 @@ export default defineNuxtConfig({
       useCookie: true
     },
     vueI18n: './i18n.config.js'
+  },
+  googleFonts: {
+    families: {
+      'Fira Code': true
+    }
   }
 })

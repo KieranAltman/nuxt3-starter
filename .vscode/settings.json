@@ -7,7 +7,5 @@
     "source.fixAll.eslint": "explicit"
   },
   "css.customData": [".vscode/tailwind.json"],
-  "[vue]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
 }
