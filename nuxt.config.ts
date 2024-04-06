@@ -5,7 +5,10 @@ export default defineNuxtConfig({
     'nuxt-icon',
     '@nuxtjs/tailwindcss',
     '@nuxtjs/i18n',
-    '@nuxtjs/google-fonts'
+    '@nuxtjs/google-fonts',
+    '@formkit/auto-animate/nuxt',
+    '@freeloop/nuxt-ui-components',
+    '@freeloop/utils/nuxt'
   ],
   app: {
     head: {
