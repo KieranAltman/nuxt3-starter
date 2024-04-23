@@ -1,8 +1,8 @@
 <template>
-  <div class="shadow-lg shadow-slate-200 transition-all dark:shadow-stone-800">
+  <div class="shadow-lg shadow-zinc-200/50 transition-all dark:shadow-stone-800">
     <div class="mx-auto flex h-20 max-w-[80rem] items-center px-12">
       <h1 class="flex items-center gap-2 text-sm font-semibold">
-        <img src="~~/assets/images/logo.png" class="w-10" alt="" />
+        <IconsLogo class="w-6" />
         <span>Nuxt3 Starter</span>
       </h1>
       <button

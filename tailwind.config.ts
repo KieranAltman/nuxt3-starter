@@ -1,13 +1,13 @@
 import type { Config } from 'tailwindcss'
 
 export default <Partial<Config>>{
+  darkMode: 'class',
   content: [
     './components/**/*.{js,vue,ts}',
     './layouts/**/*.vue',
     './pages/**/*.vue',
     './plugins/**/*.{js,ts}',
-    './nuxt.config.{js,ts}',
-    './node_modules/flowbite/**/*.{js,ts}'
+    './nuxt.config.{js,ts}'
   ],
   theme: {
     extend: {
@@ -16,6 +16,5 @@ export default <Partial<Config>>{
         FiraCode: ['Fira Code']
       }
     }
-  },
-  plugins: [require('flowbite/plugin')]
+  }
 }

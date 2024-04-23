@@ -17,7 +17,8 @@ export default defineNuxtConfig({
         { charset: 'utf-8' },
         { hid: 'keywords', name: 'keywords', content: '' },
         { hid: 'description', name: 'description', content: '' }
-      ]
+      ],
+      link: [{ rel: 'icon', href: '/favicon.svg' }]
     }
   },
   typescript: { strict: true },

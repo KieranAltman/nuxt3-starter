@@ -1,6 +1,6 @@
 <template>
   <div
-    class="transition-all duration-150 bg-slate-100 text-slate-800 dark:text-slate-100 dark:bg-neutral-900 font-FiraCode"
+    class="bg-zinc-50 font-FiraCode text-slate-800 transition-all duration-150 dark:bg-neutral-900 dark:text-slate-100"
   >
     <Header />
     <slot />
