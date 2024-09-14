@@ -2,14 +2,13 @@ export default defineNuxtConfig({
   modules: [
     ['@pinia/nuxt', { autoImports: ['defineStore'] }],
     '@vueuse/nuxt',
-    'nuxt-icon',
     '@nuxtjs/tailwindcss',
     '@nuxtjs/i18n',
     '@nuxtjs/google-fonts',
-    '@formkit/auto-animate/nuxt',
-    '@freeloop/nuxt-ui-components',
-    '@freeloop/utils/nuxt'
+    '@nuxt/icon',
+    'nuxt-gtag'
   ],
+
   app: {
     head: {
       title: 'Nuxt3 Starter',
@@ -21,8 +20,10 @@ export default defineNuxtConfig({
       link: [{ rel: 'icon', href: '/favicon.svg' }]
     }
   },
+
   typescript: { strict: true },
   css: ['~~/assets/css/app.css', '~~/assets/css/transition.css'],
+
   i18n: {
     langDir: './locales',
     skipSettingLocaleOnNavigate: true,
@@ -33,9 +34,12 @@ export default defineNuxtConfig({
     },
     vueI18n: './i18n.config.js'
   },
+
   googleFonts: {
     families: {
       'Fira Code': true
     }
-  }
+  },
+
+  compatibilityDate: '2024-09-14'
 })
